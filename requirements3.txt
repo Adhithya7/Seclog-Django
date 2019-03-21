@@ -23,7 +23,6 @@ pyparsing==2.0.3
 requests
 scikit-learn==0.20.1
 scipy==1.1.0
-ssh-import-id==5.5
 sympy==0.7.6.1
 tables==3.2.2
 tornado==4.2.1
