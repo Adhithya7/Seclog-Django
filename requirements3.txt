@@ -17,7 +17,7 @@ Pillow==3.1.2
 pycrypto==2.6.1
 pycups==1.9.73
 pycurl==7.43.0
-pygobject==3.20.0
+pygobject==3.32.0
 pyOpenSSL==18.0.0
 pyparsing==2.0.3
 scikit-learn==0.20.1
