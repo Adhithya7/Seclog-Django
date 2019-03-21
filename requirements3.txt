@@ -24,9 +24,7 @@ requests
 scikit-learn==0.20.1
 scipy==1.1.0
 sympy==0.7.6.1
-tables==3.2.2
 tornado==4.2.1
 ufw==0.35
 xkit==0.0.0
 XlsxWriter==0.7.3
-zc.lockfile==1.4
