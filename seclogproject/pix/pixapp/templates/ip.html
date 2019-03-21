@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Target IP</title>
+        <meta charset="UTF-8"> 
+        <link rel="shortcut icon" type="image/png" href="{% static 'res/header-img.png' %}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <!-- Header -->
+        
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid"> 
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+                       <span class="icon-bar"></span> 
+                       <span class="icon-bar"></span> 
+                       <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="index.html"><img src="{% static 'res/header-img.png' %}"/></a> 
+                </div> 
+                <div class="collapse navbar-collapse" id="myNavbar"> 
+                    <ul class="nav navbar-nav navbar-right"> 
+                    	<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>  
+                    </ul> 
+                </div> 
+            </div> 
+        </div>        
+       <!--Header end-->
+
+       <!--  panel starts -->
+
+        <div class="container" style="margin-top:15%">
+            <div class="row" style="text-align: center">
+                
+
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Enter Target Machine Details</h4>
+                        </div>
+
+                        <div class="panel-body">
+                            <form action="submitIP" method="post" name="IPform" onsubmit="">
+				{% csrf_token %}
+                                <div class="form-group">
+                                    <input type="text"  class="form-control" name="ip"  placeholder="Enter IP" required >
+                                </div>
+				                <div class="form-group">
+                                    <input type="text"  class="form-control" name="host"  placeholder="Enter Host Name" required >
+                                </div>
+
+                                <input type="submit" class="btn btn-primary" style="margin-top:2%" value="Submit" />
+                            </form><br>		
+				{% if status is False %}
+					<div class="alert alert-danger">{{msg}}</div>
+				{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!--Panel ends-->
+
+    </body>
+</html>
+

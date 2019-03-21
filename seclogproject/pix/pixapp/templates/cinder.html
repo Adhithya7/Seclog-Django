@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cinder</title>
+<meta charset="UTF-8"> 
+<meta http-equiv="refresh" content="5">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Header -->
+<div class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid"> 
+<div class="navbar-header"> 
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+<span class="icon-bar"></span> 
+<span class="icon-bar"></span> 
+<span class="icon-bar"></span>
+</button> 
+<a class="navbar-brand" href="index.html">{% load static %}
+<img  src="{% static "res/header-img.png" %}"/></a> 
+</div> 
+<div class="collapse navbar-collapse" id="myNavbar"> 
+<ul class="nav navbar-nav navbar-right"> 
+<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>  
+</ul> 
+<ul class="nav navbar-nav navbar-right"> 
+<li><a href="">option 1</a></li>  
+</ul> 
+<ul class="nav navbar-nav navbar-right"> 
+<li><a href="">option 2</a></li>  
+</ul> 
+</div> 
+</div> 
+</div>        
+<!--Header end-->
+<div class="container" style="margin-top: 5%;">
+<center><h1>Cinder Service</h1></center><br><br>
+{% if not flag %}
+	<center><h3>Scanning log files<img style="width: 80px; height: 60px;" src="{% static 'res/loading.gif' %}"/></h3></center>
+{% else %}
+	<center><h3>Detected credentials:</h3></center><br>
+	<div class="row col-sm-offset-3 col-sm-6 alert alert-success">
+	<ol>
+		{% for n in nlist %}
+			<li>{{n}}</li>
+		{% endfor %}
+	</ol>
+	</div>
+{% endif %}
+
+</body>
+</html>

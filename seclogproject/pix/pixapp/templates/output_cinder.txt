@@ -1,0 +1,10 @@
+start
+In 192.168.0.62 cinder backup.log:
+1ndiaN@1234
+In 192.168.0.62 cinder api.log:
+Nist@1234
+In 192.168.0.62 cinder scheduler.log:
+TESt@1234
+In 192.168.0.62 cinder volume.log:
+No credentials detected
+end

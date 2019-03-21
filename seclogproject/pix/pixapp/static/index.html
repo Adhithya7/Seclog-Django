@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="sha.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid"> 
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+                       <span class="icon-bar"></span> 
+                       <span class="icon-bar"></span> 
+                       <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="index.html"><img  src="{% static "res/header-img.png" %}"/></a> 
+                </div> 
+                <div class="collapse navbar-collapse" id="myNavbar"> 
+                    <ul class="nav navbar-nav navbar-right"> 
+                    <!--    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>  -->
+                    </ul> 
+                </div> 
+            </div> 
+        </div>        
+       <!--Header end-->
+
+       <!-- Login panel -->
+
+        <div class="container" style="margin-top:15%">
+            <div class="row" style="text-align: center">
+                <div class="col-sm-6" style="display: inline-block;">
+                    <center>
+                        <h2>
+                            Welcome to Log Monitoring Server
+                        </h2>
+                    </center>
+                </div>
+
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>LOGIN</h4>
+                        </div>
+
+                        <div class="panel-body">
+                            <form action="home.html" method="post" name="loginform" onsubmit="">
+                                <div class="form-group">
+                                    <input type="text"  class="form-control" name="user"  placeholder="User Name" required >
+                                </div>
+                                <div class="form-group">
+                                    <input type="password"  class="form-control" name="password" placeholder="Password"  required >
+                                <div>
+                                <input type="submit" class="btn btn-primary" style="margin-top:2%" value="Login" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Login Panel ends-->
+
+    </body>
+</html>

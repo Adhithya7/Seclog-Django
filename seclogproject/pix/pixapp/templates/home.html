@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid"> 
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+                       <span class="icon-bar"></span> 
+                       <span class="icon-bar"></span> 
+                       <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="index.html">{% load static %}
+			<img  src="{% static 'res/header-img.png' %}"/></a> 
+                </div> 
+                <div class="collapse navbar-collapse" id="myNavbar"> 
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>  
+                    </ul> 
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li><a href="ip.html">IP: {{request.session.ip}}</a></li>  
+                    </ul> 
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li><a href="ip.html">HOST: {{request.session.host}}</a></li>  
+                    </ul> 
+                </div> 
+            </div> 
+        </div>        
+       <!--Header end-->
+
+  
+
+        <div class="container" style="margin-top: 5%;">
+            <center><h1>Select the Type of Data</h1></center><br><br>
+            <div style="font-size: 1.5em">
+                <ol>
+                    <li>
+                        <a href="logs.html" title="">Logs</a>
+                    </li>
+                    <li>
+                        <a href="metadata.html" title="">Metadata</a>
+                    </li>
+                    <li>
+                        <a href="snapshot.html" title="">Snapshot</a>
+                    </li>
+                  
+                </ol>
+            </div>
+        </div>
+
+		
+
+    </body>
+</html>
+
