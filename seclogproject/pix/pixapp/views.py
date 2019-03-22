@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 from itertools import islice
 from django.http import HttpResponseRedirect
 
-template_path ='/seclogproject/pix/pixapp/templates/'
+template_path ='/Seclog-Django/seclogproject/pix/pixapp/templates/'
 py_path = '/seclog/'
 tmpfile_path = template_path + 'tmp.txt'
 
