@@ -22,14 +22,14 @@ plist=[]
 
 class pixpage1(TemplateView):
     def get(self, request):
-        if request.user.is_authenticated and request.session.get('ip'):
+        if request.user.is_authenticated:
             return render(request,'home.html')
         else :
             return HttpResponseRedirect('logout.html')
                 
 class pixpage2(TemplateView):
 	def get(self, request):
-		if request.user.is_authenticated and request.session.get('ip'):
+		if request.user.is_authenticated:
 			nlist=[]
 			flag=False
 
@@ -68,7 +68,7 @@ class pixpage2(TemplateView):
 	
 class pixpage3(TemplateView):
 	def get(self, request):
-		if request.user.is_authenticated and request.session.get('ip'):
+		if request.user.is_authenticated:
 			nlist=[]
 			flag=False
 
@@ -109,7 +109,7 @@ class pixpage3(TemplateView):
 
 class pixpage4(TemplateView):
 	def get(self, request):
-		if request.user.is_authenticated and request.session.get('ip'):
+		if request.user.is_authenticated:
 		
 			nlist=[]
 			flag=False
@@ -151,7 +151,7 @@ class pixpage4(TemplateView):
 
 class pixpage5(TemplateView):
 	def get(self, request):
-		if request.user.is_authenticated and request.session.get('ip'):
+		if request.user.is_authenticated:
 
 			nlist=[]
 			flag = False
@@ -194,7 +194,7 @@ class pixpage5(TemplateView):
 
 class pixpage6(TemplateView):
 	def get(self, request):
-		if request.user.is_authenticated and request.session.get('ip'):		
+		if request.user.is_authenticated:		
 
 			nlist = []
 			flag = False
