@@ -64,7 +64,7 @@ sympy==0.7.6.1
 tables==3.2.2
 tornado==4.2.1
 unity-lens-photos==1.0
-urllib3==1.13.1
+urllib3==1.26.5
 wxPython==3.0.2.0
 wxPython-common==3.0.2.0
 xlrd==0.9.4
