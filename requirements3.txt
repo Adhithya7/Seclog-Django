@@ -4,7 +4,7 @@ Django==2.0.5
 html5lib==0.999
 httplib2==0.9.1
 idna==2.0
-ipython==2.4.1
+ipython==7.16.3
 matplotlib==2.2.3
 more-itertools==4.3.0
 mpmath==0.19
